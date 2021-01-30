@@ -1,18 +1,21 @@
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
+# 事件名
 name: Auto_Attendance_GitHub_Action
 
+#事件触发条件
 on:
   workflow_dispatch:
   push:
   schedule:
-    # 07:05 everyday in UTC+8, 23:05 everyday in UTC+0
+    # 16:05 everyday in UTC+8, 08:05 everyday in UTC+0
   - cron: '05 16 * * *'
 
+#工作
 jobs:
   build:
-
+    #运行的虚拟机
     runs-on: ubuntu-latest
     strategy:
       matrix:
